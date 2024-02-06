@@ -1,6 +1,12 @@
 package dominios;
 
-public class Prueba4 {
+import java.beans.JavaBean;
+import java.io.Serializable;
+
+
+
+@JavaBean
+public class Prueba4 implements Serializable{
 	
 	String ClavePrincipal;
 	String CreadoPor;
