@@ -28,7 +28,7 @@ public class RepositoryImplementacion extends Utilidadesdeclase implements Repos
 		} catch (SQLException e) {
 			System.out.print(e);
 		}
-		
+
 		ArrayList<Object> resultadoFin = maperObjeto(clase, datos);
 
 		return resultadoFin;
@@ -44,8 +44,6 @@ public class RepositoryImplementacion extends Utilidadesdeclase implements Repos
 		ResultSet datos = null;
 		try {
 			st = cnn.prepareStatement(sql);
-			
-			
 
 			for (int i = 0; i > parametros.length; i++) {
 				st.setString(i + 1, parametros[1]);
@@ -79,9 +77,7 @@ public class RepositoryImplementacion extends Utilidadesdeclase implements Repos
 
 	@Override
 	public <T> void metodoUpdateParametros(Class<T> clase, String sql, String[] parametros) {
-		parametros[0]="vaya que bien";
-		System.out.println(parametros[0]);
-		System.out.println(parametros[1]);
+		
 		Connection cnn;
 		cnn = Conexion.conexionFilemaer();
 		PreparedStatement st;
@@ -98,7 +94,5 @@ public class RepositoryImplementacion extends Utilidadesdeclase implements Repos
 		}
 
 	}
-	
-
 
 }
